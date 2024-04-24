@@ -25,12 +25,12 @@ public class PersonController {
         return new ResponseEntity<>(service.show(id), HttpStatus.OK);
     }
     @PostMapping("/people")
-    public ResponseEntity<Person> create(@RequestBody Person baker) {
-        return new ResponseEntity<>(service.create(baker), HttpStatus.CREATED);
+    public ResponseEntity<Person> create(@RequestBody Person person) {
+        return new ResponseEntity<>(service.create(person), HttpStatus.CREATED);
     }
     @PutMapping("/person/{id}")
-    public ResponseEntity<Person> update(@PathVariable Long id, @RequestBody Person baker) {
-        return new ResponseEntity<>(service.update(id, baker), HttpStatus.OK);
+    public ResponseEntity<Person> update(@PathVariable Long id, @RequestBody Person person) {
+        return new ResponseEntity<>(service.update(id, person), HttpStatus.OK);
     }
     @DeleteMapping("/person/{id}")
     public ResponseEntity<Boolean> destroy(@PathVariable Long id) {

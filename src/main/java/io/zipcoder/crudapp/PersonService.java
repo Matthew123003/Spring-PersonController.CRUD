@@ -19,13 +19,14 @@ public class PersonService {
         return repository.findById(id).get();
     }
 
-    public Person create(Person baker) {
-        return repository.save(baker);
+    public Person create(Person person) {
+        return repository.save(person);
     }
 
     public Person update(Long id, Person newPersonData) {
         Person originalPerson = repository.findById(id).get();
         originalPerson.setfName(newPersonData.getfName());
+        originalPerson.setlName(newPersonData.getlName());
         return repository.save(originalPerson);
     }
 
