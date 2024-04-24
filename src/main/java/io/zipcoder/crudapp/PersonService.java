@@ -5,8 +5,9 @@ import org.springframework.stereotype.Service;
 
 @Service
 public class PersonService {
-    private PersonRepository repository;
     @Autowired
+    private PersonRepository repository;
+
     public PersonService(PersonRepository repository) {
         this.repository = repository;
     }

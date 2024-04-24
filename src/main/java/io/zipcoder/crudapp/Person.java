@@ -1,17 +1,16 @@
 package io.zipcoder.crudapp;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
 
 @Entity
 public class Person {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "id_number")
     private Long id;
-
+    @Column(name = "first_name")
     private String fName;
+    @Column(name = "last_name")
     private String lName;
 
     public Person(){
