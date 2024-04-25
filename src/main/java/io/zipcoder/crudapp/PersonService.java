@@ -27,8 +27,8 @@ public class PersonService {
 
     public Person update(Long id, Person newPersonData) {
         Person originalPerson = repository.findById(id).orElseThrow(EntityNotFoundException::new);
-        originalPerson.setfName(newPersonData.getfName());
-        originalPerson.setlName(newPersonData.getlName());
+        originalPerson.setFirstName(newPersonData.getFirstName());
+        originalPerson.setLastName(newPersonData.getLastName());
         return repository.save(originalPerson);
     }
 

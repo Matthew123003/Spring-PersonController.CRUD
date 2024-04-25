@@ -9,23 +9,25 @@ public class Person {
     @Column(name = "id_number")
     private Long id;
     @Column(name = "first_name")
-    private String fName;
+    private String firstName;
     @Column(name = "last_name")
-    private String lName;
+    private String lastName;
 
     public Person(){
-
+        this.id = 1L;
+        this.firstName = "Peter";
+        this.lastName = "Parker";
     }
 
-    public Person(String fName, String lName){
-        this.fName = fName;
-        this.lName = lName;
+    public Person(String firstName, String lastName){
+        this.firstName = firstName;
+        this.lastName = lastName;
     }
 
-    public Person(Long id, String fName, String lName){
+    public Person(Long id, String firstName, String lastName){
         this.id = id;
-        this.fName = fName;
-        this.lName = lName;
+        this.firstName = firstName;
+        this.lastName = lastName;
     }
 
     public Long getId() {
@@ -36,19 +38,19 @@ public class Person {
         this.id = id;
     }
 
-    public String getfName() {
-        return fName;
+    public String getFirstName() {
+        return firstName;
     }
 
-    public void setfName(String fName) {
-        this.fName = fName;
+    public void setFirstName(String firstName) {
+        this.firstName = firstName;
     }
 
-    public String getlName() {
-        return lName;
+    public String getLastName() {
+        return lastName;
     }
 
-    public void setlName(String lName) {
-        this.lName = lName;
+    public void setLastName(String lastName) {
+        this.lastName = lastName;
     }
 }
